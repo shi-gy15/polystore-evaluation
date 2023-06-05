@@ -1,0 +1,15 @@
+// Q_{2,1}
+match {class: Artist, where: (artist_id = 1), as: master}
+.out('Mentor') {maxDepth: 6, as: apprentice}
+return distinct apprentice
+
+// Q_{2,2}
+match {class: Artist, as: apprentice}
+.in('Mentor') {maxDepth: 6, where: (artist_id = 1), as: master}
+return distinct apprentice
+
+// Q_{2,3}
+select apprentice from (match {class: Artist, as: apprentice}
+.in('Mentor') {maxDepth: 6, as: master}
+return distinct apprentice, master
+) where master.artist_id = 1

@@ -1,0 +1,16 @@
+// Q_{4,1}
+select in('Follow').user_id
+from User
+where register_time <= '2022-02-01 08:00:00'.asDateTime()
+
+// Q_{4,2}
+select from (select user_id, out('Follow') as follower
+from User
+unwind follower)
+where follower.register_time <= '2022-02-01 08:00:00'.asDateTime()
+
+// Q_{4,3}
+select from (
+select user_id, register_time, in('Follow').user_id
+from User
+) where register_time <= '2022-02-01 08:00:00'.asDateTime()

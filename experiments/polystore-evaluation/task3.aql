@@ -1,0 +1,29 @@
+// Q_{3,1}
+FOR post IN Post
+    FILTER LENGTH(post.comments) >= 4
+    FOR author IN User
+        FILTER author._user_id == post.user_id
+        RETURN {'content': post.content,
+                'numComments': LENGTH(post.comments),
+                'authorID': author._user_id,
+                'authorNickname': author.nickname}
+
+// Q_{3,2}
+FOR author IN User
+    FOR post IN Post
+        FILTER LENGTH(post.comments) >= 4
+        FILTER author._user_id == post.user_id
+        RETURN {'content': post.content,
+                'numComments': LENGTH(post.comments),
+                'authorID': author._user_id,
+                'authorNickname': author.nickname}
+
+// Q_{3,3}
+FOR post IN Post
+    FOR author IN User
+        FILTER author._user_id == post.user_id
+        FILTER LENGTH(post.comments) >= 4
+        RETURN {'content': post.content,
+                'numComments': LENGTH(post.comments),
+                'authorID': author._user_id,
+                'authorNickname': author.nickname}

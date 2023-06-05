@@ -1,0 +1,27 @@
+// Q_{5,1}
+select in('Author').in('Follow')
+from post
+where post.content like '%tian%'
+
+// Q_{5,3}
+select user_id, username, nickname, gender, register_time from (
+select user_id, username, nickname, gender, register_time, out('Follow').out('Author') as posts
+from User
+unwind posts
+) where posts.content like '%tian%' 
+
+// Q_{5,7}
+
+select author.in('Follow') as follower from (
+select content, in('Author') as author
+from post
+unwind author
+) where content like '%tian%'
+
+
+// Q_{5,9}
+select follower from (
+select content, in('Author').in('Follow') as follower
+from post
+unwind follower
+) where content like '%tian%'

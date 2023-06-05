@@ -1,0 +1,62 @@
+// Q_{6,1}
+FOR follower IN User
+    FILTER follower._user_id == 1
+    FOR author IN 1..5 OUTBOUND follower Follow
+        FOR post IN Post
+            FILTER post.user_id == author._user_id
+            FILTER DATE_TIMESTAMP(post.publish_time) >= DATE_TIMESTAMP('2022-08-01 00:00:00')
+            RETURN {'post_id': post.post_id, 'content': post.content}
+
+// Q_{6,2}
+FOR follower IN User
+    FILTER follower._user_id == 1
+    FOR post IN Post
+        FILTER DATE_TIMESTAMP(post.publish_time) >= DATE_TIMESTAMP('2022-08-01 00:00:00')
+        FOR author IN 1..5 OUTBOUND follower Follow
+            FILTER post.user_id == author._user_id
+            RETURN {'post_id': post.post_id, 'content': post.content}
+
+// Q_{6,3}
+FOR author IN User
+    FOR follower IN 1..5 INBOUND author Follow
+        FILTER follower._user_id == 1
+        FOR post IN Post
+            FILTER post.user_id == author._user_id
+            FILTER DATE_TIMESTAMP(post.publish_time) >= DATE_TIMESTAMP('2022-08-01 00:00:00')
+            RETURN {'post_id': post.post_id, 'content': post.content}
+
+// Q_{6,4}
+FOR author IN User
+    FOR post IN Post
+        FILTER DATE_TIMESTAMP(post.publish_time) >= DATE_TIMESTAMP('2022-08-01 00:00:00')
+        FILTER post.user_id == author._user_id
+        FOR follower IN 1..5 INBOUND author Follow
+            FILTER follower._user_id == 1
+            RETURN {'post_id': post.post_id, 'content': post.content}
+
+// Q_{6,5}
+FOR post IN Post
+    FILTER DATE_TIMESTAMP(post.publish_time) >= DATE_TIMESTAMP('2022-08-01 00:00:00')
+    FOR author IN User
+        FILTER post.user_id == author._user_id
+        FOR follower IN 1..5 INBOUND author Follow
+            FILTER follower._user_id == 1
+            RETURN {'post_id': post.post_id, 'content': post.content}
+
+// Q_{6,6}
+FOR follower IN User
+    FOR author IN 1..5 OUTBOUND follower Follow
+        FILTER follower._user_id == 1
+        FOR post IN Post
+            FILTER post.user_id == author._user_id
+            FILTER DATE_TIMESTAMP(post.publish_time) >= DATE_TIMESTAMP('2022-08-01 00:00:00')
+            RETURN {'post_id': post.post_id, 'content': post.content}
+
+// Q_{6,7}
+FOR follower IN User
+    FOR author IN 1..5 OUTBOUND follower Follow
+        FOR post IN Post
+            FILTER follower._user_id == 1
+            FILTER post.user_id == author._user_id
+            FILTER DATE_TIMESTAMP(post.publish_time) >= DATE_TIMESTAMP('2022-08-01 00:00:00')
+            RETURN {'post_id': post.post_id, 'content': post.content}

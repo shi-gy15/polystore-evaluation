@@ -1,0 +1,71 @@
+// Q_{5,1}
+FOR post IN Post
+    FILTER CONTAINS(post.content, "tian")
+    FOR author IN User
+        FILTER author._user_id == post.user_id
+        FOR follower IN 1..1 INBOUND author Follow
+            RETURN follower
+
+// Q_{5,2}
+FOR post IN Post
+    FILTER CONTAINS(post.content, "tian")
+    FOR follower IN User
+        FOR author IN 1..1 OUTBOUND follower Follow
+            FILTER author._user_id == post.user_id
+            RETURN follower
+
+// Q_{5,3}
+FOR follower IN User
+    FOR author IN 1..1 OUTBOUND follower Follow
+        FOR post IN Post
+            FILTER author._user_id == post.user_id
+            FILTER CONTAINS(post.content, "tian")
+            RETURN follower
+
+// Q_{5,4}
+FOR follower IN User
+    FOR post IN Post
+        FILTER CONTAINS(post.content, "tian")
+        FOR author IN 1..1 OUTBOUND follower Follow
+            FILTER author._user_id == post.user_id
+            RETURN follower
+
+// Q_{5,5}
+FOR author IN User
+    FOR follower IN 1..1 INBOUND author Follow
+        FOR post IN Post
+            FILTER CONTAINS(post.content, "tian")
+            FILTER author._user_id == post.user_id
+            RETURN follower
+
+// Q_{5,6}
+FOR post IN Post
+    FILTER CONTAINS(post.content, "tian")
+    FOR author IN User
+        FOR follower IN 1..1 INBOUND author Follow
+            FILTER author._user_id == post.user_id
+            RETURN follower
+
+// Q_{5,7}
+FOR post IN Post
+    FOR author IN User
+        FILTER CONTAINS(post.content, "tian")
+        FILTER author._user_id == post.user_id
+        FOR follower IN 1..1 INBOUND author Follow
+            RETURN follower
+
+// Q_{5,8}
+FOR post IN Post
+    FOR author IN User
+        FILTER CONTAINS(post.content, "tian")
+        FOR follower IN 1..1 INBOUND author Follow
+            FILTER author._user_id == post.user_id
+            RETURN follower
+
+// Q_{5,9}
+FOR post IN Post
+    FOR author IN User
+        FOR follower IN 1..1 INBOUND author Follow
+            FILTER CONTAINS(post.content, "tian")
+            FILTER author._user_id == post.user_id
+            RETURN follower

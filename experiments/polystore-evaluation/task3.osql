@@ -1,0 +1,26 @@
+// Q_{3,1}
+select
+  content, 
+  comments.size() as numComments, 
+  in('Author').user_id as authorID, 
+  in('Author').nickname as authorNickname
+from Post where comments.size() >= 4
+
+// Q_{3,2}
+select
+  out('Author').content as content,
+  out('Author').comments.size() as numComments,
+  user_id as authorID,
+  nickname as authorNickname
+from User
+where out('Author').comments.size() >= 4
+
+// Q_{3,3}
+select from (
+select
+  content, 
+  comments.size() as numComments, 
+  in('Author').user_id as authorID, 
+  in('Author').nickname as authorNickname
+from Post
+) where numComments >= 4

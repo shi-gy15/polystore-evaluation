@@ -1,0 +1,11 @@
+// Q_{6,1}
+match {class: User, where: (user_id = 1), as: follower}
+.out('Follow') {maxDepth: 5, as: author}
+.out('Author') {where: publish_time >= '2022-08-01 00:00:00'.asDateTime(), as: posts}
+return posts.post_id, posts.content
+
+// Q_{6,5}
+match {class: Post, where: (publish_time >= '2022-08-01 00:00:00'.asDateTime()), as: posts}
+.in('Author')
+.in('Follow') {maxDepth: 5, where: (user_id = 1), as: follower}
+return posts.post_id, posts.content
