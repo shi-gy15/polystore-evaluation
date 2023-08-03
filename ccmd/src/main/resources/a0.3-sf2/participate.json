@@ -1,0 +1,34 @@
+{
+  "graph": "opera-sf2",
+  "node": [
+    {
+      "label": "artist",
+      "amount": 20030
+    },
+    {
+      "label": "aria",
+      "amount": 21060
+    }
+  ],
+  "edge": [
+    {
+      "label": "participate",
+      "source": "artist",
+      "target": "aria",
+      "amount": 200000,
+      "in": {
+        "type": "power_law",
+        "lambda": 1.5,
+        "min_d": 0,
+        "max_d": 8
+      },
+      "out": {
+        "type": "power_law",
+        "lambda": 1.5,
+        "min_d": 0,
+        "max_d": 46
+      }
+    }
+  ],
+  "store_format": "ADJ"
+}

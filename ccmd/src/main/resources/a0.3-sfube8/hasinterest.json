@@ -1,0 +1,34 @@
+{
+  "graph": "opera-sfub1",
+  "node": [
+    {
+      "label": "person",
+      "amount": 100000
+    },
+    {
+        "label": "tag",
+        "amount": 16548
+    }
+  ],
+  "edge": [
+    {
+      "label": "hasinterest",
+      "source": "person",
+      "target": "tag",
+      "amount": 5000000,
+      "in": {
+        "type": "power_law",
+        "lambda": 1.2,
+        "min_d": 1,
+        "max_d": 400
+      },
+      "out": {
+        "type": "power_law",
+        "lambda": 1.2,
+        "min_d": 1,
+        "max_d": 400
+      }
+    }
+  ],
+  "store_format": "ADJ"
+}

@@ -1,0 +1,7 @@
+FOR track IN Track
+    FOR apprentice IN Artist
+        FOR master IN 1..2 INBOUND apprentice Mentor
+            FILTER master._artist_id == 1
+            FOR aria IN 1 OUTBOUND apprentice Participate
+                FILTER track.aria_id == aria._aria_id
+                RETURN {apprentice, track}

@@ -1,0 +1,8 @@
+FOR post IN Post
+    FOR author IN User
+        FILTER author._user_id == post.user_id
+        FILTER LENGTH(post.comments) >= 4
+        RETURN {'content': post.content,
+                'numComments': LENGTH(post.comments),
+                'authorID': author._user_id,
+                'authorNickname': author.nickname}

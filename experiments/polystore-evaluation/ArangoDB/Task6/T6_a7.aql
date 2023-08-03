@@ -1,0 +1,7 @@
+FOR follower IN User
+    FOR author IN 1..5 OUTBOUND follower Follow
+        FOR post IN Post
+            FILTER follower._user_id == 1
+            FILTER post.user_id == author._user_id
+            FILTER DATE_TIMESTAMP(post.publish_time) >= DATE_TIMESTAMP('2022-08-01 00:00:00')
+            RETURN {'post_id': post.post_id, 'content': post.content}

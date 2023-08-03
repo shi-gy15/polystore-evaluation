@@ -1,0 +1,121 @@
+{
+  "amount": 23,
+  "min_value": 0.0004992511233150275,
+  "values": [
+    {
+      "value": 0,
+      "probability": 0.00399400898652022,
+      "name": "6"
+    },
+    {
+      "value": 1,
+      "probability": 0.004992511233150275,
+      "name": "8"
+    },
+    {
+      "value": 2,
+      "probability": 0.7568647029455816,
+      "name": "21"
+    },
+    {
+      "value": 3,
+      "probability": 0.0014977533699450823,
+      "name": "14"
+    },
+    {
+      "value": 4,
+      "probability": 0.0029955067398901645,
+      "name": "7"
+    },
+    {
+      "value": 5,
+      "probability": 0.003494757863205192,
+      "name": "9"
+    },
+    {
+      "value": 6,
+      "probability": 0.0029955067398901645,
+      "name": "19"
+    },
+    {
+      "value": 7,
+      "probability": 0.21168247628557163,
+      "name": "20"
+    },
+    {
+      "value": 8,
+      "probability": 0.0004992511233150275,
+      "name": "26"
+    },
+    {
+      "value": 9,
+      "probability": 0.0004992511233150275,
+      "name": "4"
+    },
+    {
+      "value": 10,
+      "probability": 0.0004992511233150275,
+      "name": "27"
+    },
+    {
+      "value": 11,
+      "probability": 0.0004992511233150275,
+      "name": "24"
+    },
+    {
+      "value": 12,
+      "probability": 0.00199700449326011,
+      "name": "13"
+    },
+    {
+      "value": 13,
+      "probability": 0.00199700449326011,
+      "name": "12"
+    },
+    {
+      "value": 14,
+      "probability": 0.0004992511233150275,
+      "name": "30"
+    },
+    {
+      "value": 15,
+      "probability": 0.0004992511233150275,
+      "name": "25"
+    },
+    {
+      "value": 16,
+      "probability": 0.0004992511233150275,
+      "name": "29"
+    },
+    {
+      "value": 17,
+      "probability": 0.0004992511233150275,
+      "name": "28"
+    },
+    {
+      "value": 18,
+      "probability": 0.0004992511233150275,
+      "name": "18"
+    },
+    {
+      "value": 19,
+      "probability": 0.000998502246630055,
+      "name": "11"
+    },
+    {
+      "value": 20,
+      "probability": 0.0004992511233150275,
+      "name": "3"
+    },
+    {
+      "value": 21,
+      "probability": 0.000998502246630055,
+      "name": "2"
+    },
+    {
+      "value": 22,
+      "probability": 0.0004992511233150275,
+      "name": "23"
+    }
+  ]
+}

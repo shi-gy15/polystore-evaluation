@@ -1,0 +1,6 @@
+FOR post IN Post
+    FOR author IN User
+        FILTER CONTAINS(post.content, "tian")
+        FILTER author._user_id == post.user_id
+        FOR follower IN 1..1 INBOUND author Follow
+            RETURN follower

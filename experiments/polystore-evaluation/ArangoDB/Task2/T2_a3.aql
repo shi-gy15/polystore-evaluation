@@ -1,0 +1,4 @@
+FOR master IN Artist
+    FOR apprentice IN 1..6 OUTBOUND master Mentor
+        FILTER master._artist_id == 1
+        RETURN DISTINCT apprentice

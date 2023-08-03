@@ -1,0 +1,133 @@
+{
+  "a": 0.3,
+  "factor": {
+    "ub1": {
+        "person": 11000,
+        "knows": 400000,
+        "post": 232223,
+        "tag": 16548,
+        "product": 8610,
+        "order_single": 148902,
+        "order": 297804,
+        "orderline_single": 722562,
+        "orderline": 1445124,
+        "rating": 2470515
+    },
+   "ub10": {
+       "person": 73000,
+       "knows": 1878112,
+       "hastag": 4996708,
+       "hasinterest": 4996708,
+       "post": 1689824,
+       "tag": 16548,
+       "product": 8610,
+       "order_single": 1092222,
+       "order": 2184444,
+       "orderline_single": 5305745,
+       "orderline": 10611490,
+       "rating": 17704516
+   },
+   "ube8": {
+       "person": 100000,
+       "knows": 4000000,
+       "hastag": 20000000,
+       "hasinterest": 5000000,
+       "post": 5000000,
+       "tag": 16548,
+       "product": 8610,
+       "order_single": 3000000,
+       "order": 6000000,
+       "orderline_single": 30000000,
+       "orderline": 60000000,
+       "rating": 65000000
+   },
+      "ube9": {
+       "person": 400000,
+       "knows": 10000000,
+       "hastag": 200000000,
+       "hasinterest": 200000000,
+       "post": 50000000,
+       "tag": 16548,
+       "product": 8610,
+       "order_single": 100000000,
+       "order": 200000000,
+       "orderline_single": 100000000,
+       "orderline": 200000000,
+       "rating": 500000000
+   },
+    "1": {
+      "artist": 2003,
+      "aria": 2106,
+      "track": 761,
+      "mentor": 204,
+      "participate": 949,
+      "user_profile": 10000,
+      "post": 50000,
+      "comment": 50000,
+      "subscribe": 10000,
+      "rate": 10000
+    },
+    "2": {
+      "artist": 20030,
+      "aria": 21060,
+      "track": 7610,
+      "mentor": 4070,
+      "participate": 18935,
+      "user_profile": 100000,
+      "post": 100000,
+      "comment": 550000,
+      "subscribe": 100000,
+      "rate": 100000
+    },
+    "3": {
+      "artist": 200300,
+      "aria": 210600,
+      "track": 76100,
+      "mentor": 81213,
+      "participate": 377803,
+      "user_profile": 1000000,
+      "post": 5000000,
+      "comment": 75000000,
+      "subscribe": 1000000,
+      "rate": 1000000
+    },
+    "4": {
+      "artist": 2003000,
+      "aria": 2106000,
+      "track": 761000,
+      "mentor": 1620429,
+      "participate": 7538174,
+      "user_profile": 10000000,
+      "post": 50000000,
+      "comment": 50000000,
+      "subscribe": 10000000,
+      "rate": 10000000
+    },
+    "5": {
+      "artist": 20030000,
+      "aria": 21060000,
+      "track": 7610000,
+      "mentor": 32331821,
+      "participate": 150406363,
+      "user_profile": 1000000,
+      "post": 50000000,
+      "comment": 100000000,
+      "subscribe": 1000000,
+      "rate": 1000000
+    },
+    "6": {
+      "artist": 200300000,
+      "aria": 210600000,
+      "track": 76100000,
+      "mentor": 645104642,
+      "participate": 3001001499
+    },
+    "7": {
+      "artist": 2003000000,
+      "aria": 2106000000,
+      "track": 761000000,
+      "mentor": 12871529827,
+      "participate": 59877851991
+    }
+  }
+}

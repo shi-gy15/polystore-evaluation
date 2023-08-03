@@ -1,0 +1,4 @@
+FOR old_user IN User
+    FOR follower IN 1..1 INBOUND old_user Follow
+        FILTER DATE_TIMESTAMP(old_user.register_time) <= DATE_TIMESTAMP('2022-02-01 08:00:00')
+        RETURN DISTINCT follower._user_id

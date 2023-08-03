@@ -1,0 +1,30 @@
+{
+  "graph": "opera-sfub10",
+  "node": [
+    {
+      "label": "person",
+      "amount": 73000
+    }
+  ],
+  "edge": [
+    {
+      "label": "knows",
+      "source": "person",
+      "target": "person",
+      "amount": 2000000,
+      "in": {
+        "type": "power_law",
+        "lambda": 1.3,
+        "min_d": 1,
+        "max_d": 200
+      },
+      "out": {
+        "type": "power_law",
+        "lambda": 1.3,
+        "min_d": 1,
+        "max_d": 200
+      }
+    }
+  ],
+  "store_format": "ADJ"
+}

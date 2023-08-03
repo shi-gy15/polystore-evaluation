@@ -1,0 +1,31 @@
+{
+  "amount": 5,
+  "min_value": 0.006490264603095357,
+  "values": [
+    {
+      "value": 0,
+      "probability": 0.31253120319520716,
+      "name": "2"
+    },
+    {
+      "value": 1,
+      "probability": 0.41337993010484275,
+      "name": "1"
+    },
+    {
+      "value": 2,
+      "probability": 0.18472291562656015,
+      "name": "3"
+    },
+    {
+      "value": 3,
+      "probability": 0.08287568647029456,
+      "name": "5"
+    },
+    {
+      "value": 4,
+      "probability": 0.006490264603095357,
+      "name": "6"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "graph": "opera-sf2",
+  "node": [
+    {
+      "label": "user",
+      "amount": 100000
+    }
+  ],
+  "edge": [
+    {
+      "label": "follow",
+      "source": "user",
+      "target": "user",
+      "amount": 1000000,
+      "in": {
+        "type": "power_law",
+        "lambda": 1.5,
+        "min_d": 0,
+        "max_d": 400
+      },
+      "out": {
+        "type": "power_law",
+        "lambda": 1.5,
+        "min_d": 0,
+        "max_d": 200
+      },
+      "community": {
+        "amount": 200,
+        "lambda": 2,
+        "rho": 0.6
+      }
+    }
+  ],
+  "store_format": "ADJ"
+}

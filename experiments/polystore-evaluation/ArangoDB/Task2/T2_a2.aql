@@ -1,0 +1,4 @@
+FOR apprentice IN Artist
+    FOR master IN 1..6 INBOUND apprentice Mentor
+        FILTER master._artist_id == 1
+        RETURN apprentice

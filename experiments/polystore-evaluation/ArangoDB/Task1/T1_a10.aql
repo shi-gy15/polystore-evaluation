@@ -1,0 +1,11 @@
+LET arias = (
+FOR master IN Artist
+    FILTER master._artist_id == 1
+    FOR apprentice IN 1..2 OUTBOUND master Mentor
+        FOR aria IN 1 OUTBOUND apprentice Participate
+            RETURN {apprentice, aria}
+)
+FOR p IN arias
+    FOR track IN Track
+        FILTER track.aria_id == p.aria._aria_id
+        RETURN {'apprentice': p.apprentice, 'track': track}

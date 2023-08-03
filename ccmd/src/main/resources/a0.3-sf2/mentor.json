@@ -1,0 +1,30 @@
+{
+  "graph": "opera-sf2",
+  "node": [
+    {
+      "label": "artist",
+      "amount": 20030
+    }
+  ],
+  "edge": [
+    {
+      "label": "mentor",
+      "source": "artist",
+      "target": "artist",
+      "amount": 40000,
+      "in": {
+        "type": "power_law",
+        "lambda": 1.5,
+        "min_d": 0,
+        "max_d": 13
+      },
+      "out": {
+        "type": "power_law",
+        "lambda": 2,
+        "min_d": 0,
+        "max_d": 11
+      }
+    }
+  ],
+  "store_format": "ADJ"
+}

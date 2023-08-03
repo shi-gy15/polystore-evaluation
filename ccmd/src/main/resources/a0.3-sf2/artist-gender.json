@@ -1,0 +1,16 @@
+{
+  "amount": 2,
+  "min_value": 0.21867199201198204,
+  "values": [
+    {
+      "value": 0,
+      "probability": 0.7813280079880179,
+      "name": "M"
+    },
+    {
+      "value": 1,
+      "probability": 0.21867199201198204,
+      "name": "F"
+    }
+  ]
+}
